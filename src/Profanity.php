@@ -5,6 +5,7 @@ namespace Xavizera\Profanity;
 class Profanity
 {
     protected array $words = [];
+
     protected array $languages;
 
     public function __construct(array $languages = ['en'])
@@ -16,7 +17,7 @@ class Profanity
     public function loadWords()
     {
         foreach ($this->languages as $lang) {
-            $words = include __DIR__ . "/../resources/data/{$lang}.php";
+            $words = include __DIR__."/../resources/data/{$lang}.php";
             $this->words = array_flip($words);
         }
     }
@@ -29,6 +30,7 @@ class Profanity
                 return true;
             }
         }
+
         return false;
     }
 }
