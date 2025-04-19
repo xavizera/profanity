@@ -22,7 +22,7 @@ body:
           description: Describe the specific use case or scenario where this feature would be valuable
           placeholder: This feature would be useful when...
       validations:
-          required: true
+          required: false
     - type: textarea
       id: proposed-solution
       attributes:
@@ -50,7 +50,7 @@ body:
           description: What version of our Package are you currently using?
           placeholder: 0.0.0
       validations:
-          required: true
+          required: false
     - type: textarea
       id: additional-context
       attributes:
