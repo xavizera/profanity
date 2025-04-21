@@ -31,4 +31,19 @@ class Profanity
 
         return false;
     }
+
+    public function censor(string $text): string
+    {
+        $words = preg_split('/\b/', $text);
+        $new = [];
+
+        foreach ($words as $word) {
+            if (isset($this->wordsList[$word])) {
+                $word = '****';
+            }
+            array_push($new, $word);
+        }
+
+        return implode('', $new);
+    }
 }
